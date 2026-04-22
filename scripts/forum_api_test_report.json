@@ -1,0 +1,419 @@
+{
+  "baseUrl": "http://localhost:8120/api",
+  "startTime": "2026-04-21 22:15:23",
+  "totalCount": 68,
+  "passCount": 68,
+  "failCount": 0,
+  "results": [
+    {
+      "stage": "第一阶段 基础检查",
+      "step": "健康检查",
+      "success": true,
+      "detail": "服务可用"
+    },
+    {
+      "stage": "第一阶段 基础检查",
+      "step": "注册普通用户",
+      "success": true,
+      "detail": "uid:13 account:apitest_user_20260421221523"
+    },
+    {
+      "stage": "第一阶段 基础检查",
+      "step": "登录普通用户",
+      "success": true,
+      "detail": "uid:13 role:user"
+    },
+    {
+      "stage": "第一阶段 基础检查",
+      "step": "获取普通用户登录态",
+      "success": true,
+      "detail": "uid:13"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "查询分类列表",
+      "success": true,
+      "detail": "categoryId:1 count:3"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "查询板块列表",
+      "success": true,
+      "detail": "boardId:1 count:5"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "查询板块详情",
+      "success": true,
+      "detail": "boardName:Java 后端"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "查询标签列表",
+      "success": true,
+      "detail": "tagIds:[1, 2]"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "上传帖子封面",
+      "success": true,
+      "detail": "fileId:17"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "上传头像",
+      "success": true,
+      "detail": "fileId:18"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "上传正文图片",
+      "success": true,
+      "detail": "fileId:19"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "发布主帖子",
+      "success": true,
+      "detail": "postId:12"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "发布待删除帖子",
+      "success": true,
+      "detail": "postId:13"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "查询帖子分页",
+      "success": true,
+      "detail": "count:9"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "查询帖子详情",
+      "success": true,
+      "detail": "title:主帖子 20260421221523"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "更新主帖子",
+      "success": true,
+      "detail": "postId:12"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "新增主评论",
+      "success": true,
+      "detail": "commentId:11"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "新增待删除评论",
+      "success": true,
+      "detail": "commentId:12"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "查询评论分页",
+      "success": true,
+      "detail": "count:2"
+    },
+    {
+      "stage": "第二阶段 普通用户链路",
+      "step": "更新个人资料",
+      "success": true,
+      "detail": "email:apitest_20260421221523@example.com"
+    },
+    {
+      "stage": "第三阶段 内容互动链路",
+      "step": "帖子点赞",
+      "success": true,
+      "detail": "postId:12"
+    },
+    {
+      "stage": "第三阶段 内容互动链路",
+      "step": "帖子收藏",
+      "success": true,
+      "detail": "postId:12"
+    },
+    {
+      "stage": "第三阶段 内容互动链路",
+      "step": "评论点赞",
+      "success": true,
+      "detail": "commentId:11"
+    },
+    {
+      "stage": "第三阶段 内容互动链路",
+      "step": "新增举报",
+      "success": true,
+      "detail": "reportId:5"
+    },
+    {
+      "stage": "第三阶段 内容互动链路",
+      "step": "删除本人文件",
+      "success": true,
+      "detail": "fileId:18"
+    },
+    {
+      "stage": "第三阶段 内容互动链路",
+      "step": "删除待删除评论",
+      "success": true,
+      "detail": "commentId:12"
+    },
+    {
+      "stage": "第三阶段 内容互动链路",
+      "step": "删除待删除帖子",
+      "success": true,
+      "detail": "postId:13"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "普通用户退出登录",
+      "success": true,
+      "detail": "普通用户已退出"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "注册管理员测试用户",
+      "success": true,
+      "detail": "uid:14 account:apitest_admin_20260421221523"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "提升管理员权限",
+      "success": true,
+      "detail": "account:apitest_admin_20260421221523 已提升为admin"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "登录管理员",
+      "success": true,
+      "detail": "uid:14 role:admin"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "获取管理员登录态",
+      "success": true,
+      "detail": "uid:14"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "新增分类",
+      "success": true,
+      "detail": "categoryId:6"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "更新分类",
+      "success": true,
+      "detail": "categoryId:6"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "新增板块",
+      "success": true,
+      "detail": "boardId:8"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "更新板块",
+      "success": true,
+      "detail": "boardId:8"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "删除板块",
+      "success": true,
+      "detail": "boardId:8"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "删除分类",
+      "success": true,
+      "detail": "categoryId:6"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "新增标签",
+      "success": true,
+      "detail": "tagId:10"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "标签分页",
+      "success": true,
+      "detail": "count:8"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "更新标签",
+      "success": true,
+      "detail": "tagId:10"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "删除标签",
+      "success": true,
+      "detail": "tagId:10"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台帖子分页",
+      "success": true,
+      "detail": "count:10"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台审核帖子",
+      "success": true,
+      "detail": "postId:12"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台置顶帖子",
+      "success": true,
+      "detail": "postId:12"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台精华帖子",
+      "success": true,
+      "detail": "postId:12"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台评论分页",
+      "success": true,
+      "detail": "count:9"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台审核评论",
+      "success": true,
+      "detail": "commentId:11"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台举报分页",
+      "success": true,
+      "detail": "count:5"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台处理举报",
+      "success": true,
+      "detail": "reportId:5"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台用户分页",
+      "success": true,
+      "detail": "count:10"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台更新用户状态",
+      "success": true,
+      "detail": "uid:13"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台更新用户禁言",
+      "success": true,
+      "detail": "uid:13 muteEndTime:2030-01-01T00:00:00.000+08:00"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台查询系统配置列表",
+      "success": true,
+      "detail": "configId:4"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台查询系统配置分页",
+      "success": true,
+      "detail": "count:6"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台更新系统配置",
+      "success": true,
+      "detail": "configId:4"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台文件分页",
+      "success": true,
+      "detail": "count:19"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台删除文件",
+      "success": true,
+      "detail": "fileId:17"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台操作日志分页",
+      "success": true,
+      "detail": "count:20"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台统计概览",
+      "success": true,
+      "detail": "totalUserCount:14"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台统计趋势",
+      "success": true,
+      "detail": "count:7"
+    },
+    {
+      "stage": "第四阶段 管理员后台链路",
+      "step": "后台板块排行",
+      "success": true,
+      "detail": "count:5"
+    },
+    {
+      "stage": "第五阶段 回归验证",
+      "step": "回归查询帖子分页",
+      "success": true,
+      "detail": "count:8"
+    },
+    {
+      "stage": "第五阶段 回归验证",
+      "step": "回归查询帖子详情",
+      "success": true,
+      "detail": "title:主帖子已更新 20260421221523"
+    },
+    {
+      "stage": "第五阶段 回归验证",
+      "step": "回归查询评论分页",
+      "success": true,
+      "detail": "count:1"
+    },
+    {
+      "stage": "第五阶段 回归验证",
+      "step": "回归查询文件分页",
+      "success": true,
+      "detail": "count:19"
+    },
+    {
+      "stage": "第五阶段 回归验证",
+      "step": "回归查询操作日志",
+      "success": true,
+      "detail": "count:20"
+    },
+    {
+      "stage": "第五阶段 回归验证",
+      "step": "回归查询统计概览",
+      "success": true,
+      "detail": "totalUserCount:14"
+    }
+  ],
+  "success": true,
+  "durationSeconds": 1.98
+}

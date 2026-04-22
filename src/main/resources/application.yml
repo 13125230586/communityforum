@@ -1,0 +1,37 @@
+server:
+  port: 8120
+  servlet:
+    context-path: /api
+    session:
+      cookie:
+        max-age: 2592000
+spring:
+  application:
+    name: communityforum-backend
+  profiles:
+    active: local
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: deleteFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+knife4j:
+  enable: true
+  openapi:
+    title: 社区论坛系统接口文档
+    version: 1.0
+    group:
+      communityforum:
+        api-rule: package
+        api-rule-resources:
+          - com.hccmac.communityforumbackend
