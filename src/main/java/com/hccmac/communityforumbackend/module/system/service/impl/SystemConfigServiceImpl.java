@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hccmac.communityforumbackend.common.ErrorCode;
+import com.hccmac.communityforumbackend.constant.SystemConfigConstant;
 import com.hccmac.communityforumbackend.exception.ThrowUtils;
 import com.hccmac.communityforumbackend.module.system.entity.ForumSystemConfig;
 import com.hccmac.communityforumbackend.mapper.ForumSystemConfigMapper;
@@ -62,6 +63,15 @@ public class SystemConfigServiceImpl extends ServiceImpl<ForumSystemConfigMapper
     public List<SystemConfigVO> listConfigByGroup(String configGroup) {
         QueryWrapper<ForumSystemConfig> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(StringUtils.isNotBlank(configGroup), "configGroup", configGroup);
+        queryWrapper.orderByAsc("configKey");
+        return this.list(queryWrapper).stream().map(this::toSystemConfigVO).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<SystemConfigVO> listPublicConfigByGroup(String configGroup) {
+        QueryWrapper<ForumSystemConfig> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(StringUtils.isNotBlank(configGroup), "configGroup", configGroup);
+        queryWrapper.eq("configStatus", SystemConfigConstant.CONFIG_STATUS_ENABLED);
         queryWrapper.orderByAsc("configKey");
         return this.list(queryWrapper).stream().map(this::toSystemConfigVO).collect(Collectors.toList());
     }

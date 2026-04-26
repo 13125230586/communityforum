@@ -148,11 +148,16 @@ VALUES
 INSERT INTO `forum_system_config` (`id`, `configGroup`, `configKey`, `configName`, `configValue`, `valueType`, `configStatus`, `remark`, `updateUserId`)
 VALUES
     (1, 'base', 'siteName', '站点名称', 'Communityforum', 'string', 0, '站点基础配置', 1),
-    (2, 'base', 'siteNotice', '站点公告', '欢迎来到 Communityforum 社区论坛系统', 'string', 0, '首页顶部公告', 1),
+    (2, 'base', 'siteNotice', '站点公告', '欢迎来到 Communityforum 社区论坛系统', 'string', 0, '首页公告正文', 1),
     (3, 'post', 'postAuditDefault', '默认发帖审核', '0', 'number', 0, '默认无需审核', 1),
     (4, 'comment', 'commentAuditDefault', '默认评论审核', '0', 'number', 0, '默认无需审核', 1),
     (5, 'upload', 'imageMaxSizeMb', '图片最大大小', '10', 'number', 0, '单位 MB', 1),
-    (6, 'content', 'hotPostSize', '热门帖子展示数量', '10', 'number', 0, '首页展示热门帖子数量', 1);
+    (6, 'content', 'hotPostSize', '热门帖子展示数量', '10', 'number', 0, '首页展示热门帖子数量', 1),
+    (7, 'home', 'homeHeroTitle', '首页主标题', '内容优先的讨论首页', 'string', 0, '首页顶部主标题', 1),
+    (8, 'home', 'homeHeroSubtitle', '首页副标题', '中间内容流更突出 两侧做轻量辅助信息 让浏览节奏更接近真实社区论坛', 'string', 0, '首页顶部副标题', 1),
+    (9, 'home', 'homeFeedTitle', '帖子区标题', '帖子广场', 'string', 0, '首页内容区标题', 1),
+    (10, 'home', 'homeFeedSubtitle', '帖子区说明', '让标题 摘要 互动数据和板块信息更快进入视线', 'string', 0, '首页内容区说明', 1),
+    (11, 'home', 'homeNoticeTitle', '公告区标题', '站点公告', 'string', 0, '首页公告区标题', 1);
 
 INSERT INTO `forum_file_record` (
     `id`, `uploaderUserId`, `uploadType`, `storageType`, `fileName`, `fileUrl`, `objectKey`, `fileSize`, `fileSuffix`, `bizCode`, `fileStatus`, `createTime`

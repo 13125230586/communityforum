@@ -24,6 +24,7 @@ public class CommentVO implements Serializable {
     private String replyUserName;
     private String contentType;
     private String content;
+    private Integer auditStatus;
     private Integer anonymousFlag;
     private Long likeCount;
     private Long childCount;

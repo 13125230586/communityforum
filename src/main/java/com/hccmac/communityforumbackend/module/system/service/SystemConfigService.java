@@ -20,4 +20,6 @@ public interface SystemConfigService extends IService<ForumSystemConfig> {
     Boolean updateConfig(SystemConfigUpdateReq systemConfigUpdateReq, ForumUser loginUser);
 
     List<SystemConfigVO> listConfigByGroup(String configGroup);
+
+    List<SystemConfigVO> listPublicConfigByGroup(String configGroup);
 }
