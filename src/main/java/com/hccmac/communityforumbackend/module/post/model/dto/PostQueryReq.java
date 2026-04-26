@@ -13,6 +13,11 @@ public class PostQueryReq extends PageRequest {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 排序方式 comprehensive 综合排序 latest 最新发布
+     */
+    private String sortType;
+
     private Long boardId;
     private String postTitle;
     private Integer postStatus;

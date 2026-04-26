@@ -51,6 +51,7 @@ public class PostServiceImpl extends ServiceImpl<ForumPostMapper, ForumPost> imp
     private static final int DEFAULT_FLAG = 0;
     private static final int DEFAULT_COMMENT_ALLOWED_FLAG = 1;
     private static final long DEFAULT_LIST_SIZE = 10L;
+    private static final String SORT_TYPE_LATEST = "latest";
 
     @Resource
     private ForumPostContentMapper forumPostContentMapper;
@@ -225,9 +226,7 @@ public class PostServiceImpl extends ServiceImpl<ForumPostMapper, ForumPost> imp
             queryWrapper.eq("postStatus", PostConstant.POST_STATUS_PUBLISHED);
             queryWrapper.eq("auditStatus", PostConstant.AUDIT_STATUS_PASS);
         }
-        queryWrapper.orderByDesc("topFlag");
-        queryWrapper.orderByDesc("publishTime");
-        queryWrapper.orderByDesc("createTime");
+        buildPostPageSort(queryWrapper, postQueryReq.getSortType(), adminQuery);
         Page<ForumPost> postPage = this.page(new Page<>(postQueryReq.getCurrent(), postQueryReq.getPageSize()), queryWrapper);
         Page<PostVO> postVOPage = new Page<>(postQueryReq.getCurrent(), postQueryReq.getPageSize(), postPage.getTotal());
         postVOPage.setRecords(postPage.getRecords().stream().map(this::buildPostVO).collect(Collectors.toList()));
@@ -332,6 +331,17 @@ public class PostServiceImpl extends ServiceImpl<ForumPostMapper, ForumPost> imp
 
     private Integer defaultZero(Integer value) {
         return value == null ? DEFAULT_FLAG : value;
+    }
+
+    private void buildPostPageSort(QueryWrapper<ForumPost> queryWrapper, String sortType, boolean adminQuery) {
+        if (!adminQuery && SORT_TYPE_LATEST.equals(sortType)) {
+            queryWrapper.orderByDesc("publishTime");
+            queryWrapper.orderByDesc("createTime");
+            return;
+        }
+        queryWrapper.orderByDesc("topFlag");
+        queryWrapper.orderByDesc("publishTime");
+        queryWrapper.orderByDesc("createTime");
     }
 
     private long safeLong(Long value) {
